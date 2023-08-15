@@ -36,7 +36,7 @@ export const tweet = async (data, gameDayWeather) => {
     channel = data.Channel;
   }
 
-  let tweetText = `<---- #${awayTeam.name} at #${homeTeam.name} on ${channel} ---->
+  let tweetText = `<---- #${awayTeam.name} at #${homeTeam.name} ---->
 ${day} ${time} on ${channel}
   
 ${data.StadiumDetails.Name} - ${data.StadiumDetails.City}, ${data.StadiumDetails.State}

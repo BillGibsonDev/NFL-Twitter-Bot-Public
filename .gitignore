@@ -1,0 +1,14 @@
+.env
+
+node_modules
+npm-debug.log
+
+/package-lock.json
+
+/StadiumData.js
+/TeamNames.js
+database-functions/
+
+
+".txt
+.gitattributes

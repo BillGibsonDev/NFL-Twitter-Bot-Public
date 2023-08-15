@@ -69,6 +69,7 @@ export const handleWeather = async (lat, lon, data) => {
         })
       })
     .catch((err) => {
+      console.log(err)
       handleErrorLog(`Grid Point Error ${err.response.status} on game ${data.AwayTeam} vs ${data.HomeTeam}`);
       if(err.response.status === 500 || 503){
         setTimeout(() => {

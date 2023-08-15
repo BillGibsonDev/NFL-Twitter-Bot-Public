@@ -1,0 +1,312 @@
+
+<---- #Browns at #Eagles on NFLN ---->
+Thu 7:30pm EST on NFLN
+  
+Lincoln Financial Field - Philadelphia, PA
+Type: Outdoor
+Surface: Grass
+
+Game Day Forecast
+A slight chance of rain showers before 8pm, then a slight chance of showers and thunderstorms. Mostly cloudy, with a low around 72. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.
+
+<---- #Panthers at #Giants on NFLN ---->
+Fri 7:00pm EST on NFLN
+  
+MetLife Stadium - East Rutherford, NJ
+Type: Outdoor
+Surface: Artificial
+
+Game Day Forecast
+A slight chance of showers and thunderstorms before 8pm. Mostly clear, with a low around 64.
+
+<---- #Bengals at #Falcons on TBA ---->
+Fri 7:30pm EST on TBA
+  
+Mercedes-Benz Stadium - Atlanta, GA
+Type: Retractable Dome
+Surface: Artificial
+
+Game Day Forecast
+Mostly clear, with a low around 70.
+
+<---- #Jaguars at #Lions on NFLN ---->
+Sat 1:00pm EST on NFLN
+  
+Ford Field - Detroit, MI
+Type: Dome
+Surface: Artificial
+
+Game Day Forecast
+Sunny, with a high near 82.
+
+<---- #Dolphins at #Texans on NFLN ---->
+Sat 4:00pm EST on NFLN
+  
+NRG Stadium - Houston, TX
+Type: Retractable Dome
+Surface: Artificial
+
+Game Day Forecast
+Sunny, with a high near 101.
+
+<---- #Bills at #Steelers on TBA ---->
+Sat 6:30pm EST on TBA
+  
+Acrisure Stadium - Pittsburgh, PA
+Type: Outdoor
+Surface: Grass
+
+Game Day Forecast
+Mostly clear, with a low around 60.
+
+<---- #Bears at #Colts on NFLN ---->
+Sat 7:00pm EST on NFLN
+  
+Lucas Oil Stadium - Indianapolis, IN
+Type: Retractable Dome
+Surface: Artificial
+
+Game Day Forecast
+Mostly clear, with a low around 63.
+
+TypeError: Cannot read properties of undefined (reading 'status') @ Tue Aug 15 2023 09:01:29 GMT-0400 (Eastern Daylight Time)
+
+<---- #Chiefs at #Cardinals on TBA ---->
+Sat 8:00pm EST on TBA
+  
+State Farm Stadium - Glendale, AZ
+Type: Retractable Dome
+Surface: Grass
+
+Game Day Forecast
+Showers and thunderstorms likely. Mostly cloudy, with a low around 80. South southwest wind 5 to 15 mph, with gusts as high as 20 mph. Chance of precipitation is 60%. New rainfall amounts between a quarter and half of an inch possible.
+
+<---- #Titans at #Vikings on TBA ---->
+Sat 8:00pm EST on TBA
+  
+U.S. Bank Stadium - Minneapolis, MN
+Type: Dome
+Surface: Artificial
+
+Game Day Forecast
+Mostly clear, with a low around 74. South southeast wind around 10 mph.
+
+<---- #Patriots at #Packers on TBA ---->
+Sat 8:00pm EST on TBA
+  
+Lambeau Field - Green Bay, WI
+Type: Outdoor
+Surface: Grass
+
+Game Day Forecast
+Mostly clear, with a low around 68.
+
+<---- #Broncos at #49ers on TBA ---->
+Sat 8:30pm EST on TBA
+  
+Levi's Stadium - Santa Clara, CA
+Type: Outdoor
+Surface: Grass
+
+Game Day Forecast
+Mostly clear, with a low around 59.
+
+<---- #Raiders at #Rams on TBA ---->
+Sat 9:00pm EST on TBA
+  
+SoFi Stadium - Inglewood, CA
+Type: Dome
+Surface: Artificial
+
+Game Day Forecast
+Patchy fog after 11pm. Mostly cloudy, with a low around 64.
+
+<---- #Cowboys at #Seahawks on NFLN ---->
+Sat 10:00pm EST on NFLN
+  
+Lumen Field - Seattle, WA
+Type: Outdoor
+Surface: Artificial
+
+Game Day Forecast
+Partly cloudy, with a low around 57.
+
+<---- #Saints at #Chargers on NFLN ---->
+Sun 7:05pm EST on NFLN
+  
+SoFi Stadium - Inglewood, CA
+Type: Dome
+Surface: Artificial
+
+Game Day Forecast
+A slight chance of rain showers. Mostly cloudy, with a low around 68.
+
+<---- #Ravens at #Commanders on ESPN ---->
+Mon 8:00pm EST on ESPN
+  
+FedEx Field - Landover, MD
+Type: Outdoor
+Surface: Grass
+
+Game Day Forecast
+Partly cloudy, with a low around 70.
+
+<---- #Browns at #Eagles ---->
+Thu 7:30pm EST on NFLN
+  
+Lincoln Financial Field - Philadelphia, PA
+Type: Outdoor
+Surface: Grass
+
+Game Day Forecast
+A slight chance of rain showers before 8pm, then a slight chance of showers and thunderstorms. Mostly cloudy, with a low around 72. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.
+
+<---- #Panthers at #Giants ---->
+Fri 7:00pm EST on NFLN
+  
+MetLife Stadium - East Rutherford, NJ
+Type: Outdoor
+Surface: Artificial
+
+Game Day Forecast
+A slight chance of showers and thunderstorms before 8pm. Mostly clear, with a low around 64.
+
+<---- #Bengals at #Falcons ---->
+Fri 7:30pm EST on TBA
+  
+Mercedes-Benz Stadium - Atlanta, GA
+Type: Retractable Dome
+Surface: Artificial
+
+Game Day Forecast
+Mostly clear, with a low around 70.
+
+<---- #Jaguars at #Lions ---->
+Sat 1:00pm EST on NFLN
+  
+Ford Field - Detroit, MI
+Type: Dome
+Surface: Artificial
+
+Game Day Forecast
+Sunny, with a high near 82.
+
+<---- #Dolphins at #Texans ---->
+Sat 4:00pm EST on NFLN
+  
+NRG Stadium - Houston, TX
+Type: Retractable Dome
+Surface: Artificial
+
+Game Day Forecast
+Sunny, with a high near 101.
+
+<---- #Bills at #Steelers ---->
+Sat 6:30pm EST on TBA
+  
+Acrisure Stadium - Pittsburgh, PA
+Type: Outdoor
+Surface: Grass
+
+Game Day Forecast
+Mostly clear, with a low around 60.
+
+<---- #Bears at #Colts ---->
+Sat 7:00pm EST on NFLN
+  
+Lucas Oil Stadium - Indianapolis, IN
+Type: Retractable Dome
+Surface: Artificial
+
+Game Day Forecast
+Mostly clear, with a low around 63.
+
+<---- #Buccaneers at #Jets ---->
+Sat 7:30pm EST on TBA
+  
+MetLife Stadium - East Rutherford, NJ
+Type: Outdoor
+Surface: Artificial
+
+Game Day Forecast
+Mostly clear, with a low around 66.
+
+<---- #Chiefs at #Cardinals ---->
+Sat 8:00pm EST on TBA
+  
+State Farm Stadium - Glendale, AZ
+Type: Retractable Dome
+Surface: Grass
+
+Game Day Forecast
+Showers and thunderstorms likely. Mostly cloudy, with a low around 80. South southwest wind 5 to 15 mph, with gusts as high as 20 mph. Chance of precipitation is 60%. New rainfall amounts between a quarter and half of an inch possible.
+
+<---- #Titans at #Vikings ---->
+Sat 8:00pm EST on TBA
+  
+U.S. Bank Stadium - Minneapolis, MN
+Type: Dome
+Surface: Artificial
+
+Game Day Forecast
+Mostly clear, with a low around 74. South southeast wind around 10 mph.
+
+<---- #Patriots at #Packers ---->
+Sat 8:00pm EST on TBA
+  
+Lambeau Field - Green Bay, WI
+Type: Outdoor
+Surface: Grass
+
+Game Day Forecast
+Mostly clear, with a low around 68.
+
+<---- #Broncos at #49ers ---->
+Sat 8:30pm EST on TBA
+  
+Levi's Stadium - Santa Clara, CA
+Type: Outdoor
+Surface: Grass
+
+Game Day Forecast
+Mostly clear, with a low around 59.
+
+<---- #Raiders at #Rams ---->
+Sat 9:00pm EST on TBA
+  
+SoFi Stadium - Inglewood, CA
+Type: Dome
+Surface: Artificial
+
+Game Day Forecast
+Patchy fog after 11pm. Mostly cloudy, with a low around 64.
+
+<---- #Cowboys at #Seahawks ---->
+Sat 10:00pm EST on NFLN
+  
+Lumen Field - Seattle, WA
+Type: Outdoor
+Surface: Artificial
+
+Game Day Forecast
+Partly cloudy, with a low around 57.
+
+<---- #Saints at #Chargers ---->
+Sun 7:05pm EST on NFLN
+  
+SoFi Stadium - Inglewood, CA
+Type: Dome
+Surface: Artificial
+
+Game Day Forecast
+A slight chance of rain showers. Mostly cloudy, with a low around 68.
+
+<---- #Ravens at #Commanders ---->
+Mon 8:00pm EST on ESPN
+  
+FedEx Field - Landover, MD
+Type: Outdoor
+Surface: Grass
+
+Game Day Forecast
+Partly cloudy, with a low around 70.

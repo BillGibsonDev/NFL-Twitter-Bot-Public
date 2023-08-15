@@ -35,19 +35,3 @@ handleTwitterGames()
 
 // // databaseJob.start();
 // twitterJob.start();
-
-// maintenance functions
-// import { handleStadiumData } from "./maintenance-functions/handleStadiumData.js";
-
-// const stadiumJob = new CronJob(
-//   "02 * * * *",
-//   () => {
-//     handleStadiumData();
-//     console.log("stadium job started");
-//   },
-//   null,
-//   true,
-//   "America/New_York"
-// );
-
-// stadiumJob.start();
