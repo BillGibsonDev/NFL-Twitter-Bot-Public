@@ -2,10 +2,11 @@ import fs from 'fs';
 
 const handleDates = () => {
   let date = new Date();
-  let day =date.getUTCDate();
-  let month = date.getMonth() + 1;
+  let dateString = date.toDateString();
+  let removedSpaces = dateString.replace(/ /g, "");
+  let removedYear = removedSpaces.replace(/2023/, "");
 
-  return `${month}-${day}`;
+  return removedYear;
 }
 
 export const handleErrorLog = (log) => {

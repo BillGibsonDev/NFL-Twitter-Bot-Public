@@ -9,6 +9,5 @@ npm-debug.log
 /TeamNames.js
 database-functions/
 
-
-".txt
+*.txt
 .gitattributes
