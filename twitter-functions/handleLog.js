@@ -20,10 +20,10 @@ export const handleTweetLog = (log) => {
   const statuses = ['InProgress', 'Final', 'F/OT', 'Postponed' ];
   let message;
 
-  if(statuses.includes(log)){
-    message = `\n${log} @ ${new Date()}\n`;
+  if(statuses.includes(log.Status)){
+    message = `\n${log.Status} - ${log.AwayTeam} vs ${log.HomeTeam} @ ${new Date()}\n`;
   } else {
-    message = `\n${log}\n`
+    message = `\n${log}\n`;
   }
   fs.appendFile(`${handleDates()}-logs.txt`, message, function (err) {
     if (err) console.log(err);

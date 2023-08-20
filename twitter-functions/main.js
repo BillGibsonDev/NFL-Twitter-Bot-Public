@@ -29,7 +29,7 @@ export const handleTwitterGames = async () => {
         for (let i = 0; i < data.length; i++) {
           setTimeout(() => {
             if (statuses.includes(response.data[i].Status)) {
-              handleTweetLog(response.data[i].Status);
+              handleTweetLog(response.data[i]);
             } else {
               handleWeather(data[i].StadiumDetails.GeoLat, data[i].StadiumDetails.GeoLong, data[i]);
             }
