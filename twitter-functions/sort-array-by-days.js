@@ -34,7 +34,7 @@ export const handleTwitterGames = async () => {
             const gameDate = new Date(game.Date).toISOString().split("T")[0];
             
             if (!groupedData[gameDate]) {
-                groupedData[gameDate] = [];
+              groupedData[gameDate] = [];
             }
             
             groupedData[gameDate].push(game);
