@@ -8,18 +8,12 @@ import { TeamNames } from '../TeamNames.js';
 const handleHourlyFormat = (hourly) => {
   let string = '';
   hourly.forEach((hour) => {
-    let time;
-    const dataHour = Number(hour.startTime.slice(11, 13));
 
-    if (dataHour >= 12) {
-      if (dataHour === 12) {
-        time = `12:${hour.startTime.slice(14, 16)} pm EST`;
-      } else {
-        time = `${dataHour - 12}:${hour.startTime.slice(14, 16)} pm EST`;
-      }
-    } else {
-      time = `${dataHour}:${hour.startTime.slice(14, 16)} am EST`;
-    }
+    const weatherStartTimeEDT = new Date(hour.startTime).toLocaleString('en-US', { timeZone: 'America/New_York' });
+    const weatherTime = weatherStartTimeEDT; 
+    const splitWeatherTime = weatherTime.split(' ');
+    const weatherHourAndAbbreviation = splitWeatherTime[1].split(':');
+    const time = `${weatherHourAndAbbreviation[0]}:${weatherHourAndAbbreviation[1]} ${splitWeatherTime[2]}`;
 
     string += `
 <-- ${time} -->

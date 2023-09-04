@@ -62,7 +62,7 @@ export const handleTwitterGames = async () => {
         } else {
           handleWeather(data[i].StadiumDetails.GeoLat, data[i].StadiumDetails.GeoLong, data[i]);
         }
-      }, 1000 * 60 * 2 * i);
+      }, 1000 * 60 * 1 * i);
     }
   } catch (error) {
     if(attempts > 0){
