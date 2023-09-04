@@ -11,7 +11,7 @@ const handleDates = () => {
 
 export const handleErrorLog = (log) => {
   let message = `\n${log} @ ${new Date}\n`;
-  fs.appendFile(`${handleDates()}-logs.txt`, message, function (err) {
+  fs.appendFile(`./tweet-logs/Errors-${handleDates()}-logs.txt`, message, function (err) {
     if (err) console.log(err);
   });
 }
@@ -25,7 +25,7 @@ export const handleTweetLog = (log) => {
   } else {
     message = `\n${log}\n`;
   }
-  fs.appendFile(`${handleDates()}-logs.txt`, message, function (err) {
+  fs.appendFile(`./tweet-logs/${handleDates()}-logs.txt`, message, function (err) {
     if (err) console.log(err);
   });
 }
