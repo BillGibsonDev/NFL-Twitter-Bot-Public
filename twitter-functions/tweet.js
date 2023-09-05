@@ -34,7 +34,7 @@ export const tweet = async (data, gameDayWeather, hourlyWeather) => {
   }
 
   let hourly = '';
-  if(hourlyWeather && hourlyWeather.length > 0){
+  if(hourlyWeather && hourlyWeather.length === 3){
     hourly = `\n\n** Hourly Forecast in EST **${handleHourlyFormat(hourlyWeather)}`;
   } 
   

@@ -18,36 +18,26 @@ const handleTimeSort = (arr) => {
   return arr;
 }
 
-  // const sortDataByDate = (data) => {
-  //   const groupedData = {};
-  //   const today = new Date();
-  //   today.setHours(0, 0, 0, 0);
+  const sortDataByDate = (data) => {
+    const groupedData = {};
 
-  //   data.forEach(game => {
-  //     let gameDate = game.DateTime;
-  //     let slicedGameDate = gameDate.slice(0,13);
+    data.forEach(game => {
+      let gameDate = game.DateTime;
+      let slicedGameDate = gameDate.slice(0,13);
 
-  //     gameDate.setHours(0, 0, 0, 0);
-
-  //     let gameDateString = gameDate.toLocaleDateString();
-
-  //     if (today.getTime() === gameDate.getTime()) {
-  //       gameDateString = 'Today';
-  //     }
-
-  //     if (!groupedData[slicedGameDate]) {
-  //       groupedData[slicedGameDate] = {
-  //         date: slicedGameDate,
-  //         games: []
-  //       };
-  //     }
+      if (!groupedData[slicedGameDate]) {
+        groupedData[slicedGameDate] = {
+          date: gameDate,
+          games: []
+        };
+      }
       
-  //     groupedData[slicedGameDate].games.push(game);
-  //   });
+      groupedData[slicedGameDate].games.push(game);
+    });
 
-  //   const groupedArray = Object.values(groupedData);
-  //   return groupedArray;
-  // };
+    const groupedArray = Object.values(groupedData);
+    return groupedArray;
+  };
 
 const statuses = ['InProgress', 'Final', 'F/OT', 'Postponed' ];
 
@@ -55,15 +45,25 @@ export const handleTwitterGames = async () => {
   try {
     const response = await axios.get(`${process.env.NODE_ENV_SPORTS_API}`);
     const data = handleTimeSort(response.data);
-    for (let i = 0; i < data.length; i++) {
+    const groupedData = sortDataByDate(data);
+    let string = '1';
+    groupedData.forEach((day, index) => {
+      let gamesArr = day.games;
       setTimeout(() => {
-        if (statuses.includes(data[i].Status)) {
-          handleTweetLog(data[i]);
-        } else {
-          handleWeather(data[i].StadiumDetails.GeoLat, data[i].StadiumDetails.GeoLong, data[i]);
-        }
-      }, 1000 * 60 * 1 * i);
-    }
+        gamesArr.forEach((game, index) => {
+          console.log(game)
+          console.log(index)
+        //   setTimeout(() => {
+        //     if (statuses.includes(game.Status)) {
+        //       handleTweetLog(game);
+        //     } else {
+        //       string += handleWeather(game.StadiumDetails.GeoLat, game.StadiumDetails.GeoLong, game);
+        //     }
+        //   }, 1000 * 60 * 1 * index);
+        })
+      }, 1000 * 60 * 1 * index)
+    })
+    console.log(string);
   } catch (error) {
     if(attempts > 0){
       attempts--;

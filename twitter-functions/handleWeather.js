@@ -26,7 +26,40 @@ export const handleWeather = async (lat, lon, data) => {
       const dailyForecastURL = response.data.properties.forecast;
       const forecasts = await handleForecastData(dailyForecastURL, hourlyForecastURL, data);
 
-      tweet(data, forecasts.day, forecasts.hourly);
+      const handleHourlyFormat = (hourly) => {
+        let string = '';
+        hourly.forEach((hour, index) => {
+
+          const weatherStartTimeEDT = new Date(hour.startTime).toLocaleString('en-US', { timeZone: 'America/New_York' });
+          const weatherTime = weatherStartTimeEDT; 
+          const splitWeatherTime = weatherTime.split(' ');
+          const weatherHourAndAbbreviation = splitWeatherTime[1].split(':');
+          let time =  `\n<-- ${weatherHourAndAbbreviation[0]}:${weatherHourAndAbbreviation[1]} ${splitWeatherTime[2]} -->`;
+          if(index === 0){
+            time = `<-- ${weatherHourAndAbbreviation[0]}:${weatherHourAndAbbreviation[1]} ${splitWeatherTime[2]} -->`;
+          }
+
+          string += `
+      ${time}
+      ${hour.temperature} F
+      ${hour.windSpeed} ${hour.windDirection}
+      ${hour.shortForecast}`;
+      });
+      return string;
+    };
+
+    let hourly = '';
+    if(forecasts && forecasts.hourly.length === 3){
+      hourly = `\n** Hourly Forecast in EST **${handleHourlyFormat(forecasts.hourly)}`;
+    }
+
+    let day = '';
+    if(forecasts){
+      day = `\n** Game Day Forecast ** \n${forecasts.day.detailedForecast}`;
+    }
+    
+    return `${day}\n${hourly}`
+      // tweet(data, forecasts.day, forecasts.hourly);
     }
   catch(error) {
     console.log(error);
