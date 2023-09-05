@@ -7,19 +7,22 @@ import { TeamNames } from '../TeamNames.js';
 
 const handleHourlyFormat = (hourly) => {
   let string = '';
-  hourly.forEach((hour) => {
+  hourly.forEach((hour, index) => {
 
     const weatherStartTimeEDT = new Date(hour.startTime).toLocaleString('en-US', { timeZone: 'America/New_York' });
     const weatherTime = weatherStartTimeEDT; 
     const splitWeatherTime = weatherTime.split(' ');
     const weatherHourAndAbbreviation = splitWeatherTime[1].split(':');
-    const time = `${weatherHourAndAbbreviation[0]}:${weatherHourAndAbbreviation[1]} ${splitWeatherTime[2]}`;
+    let time =  `\n<-- ${weatherHourAndAbbreviation[0]}:${weatherHourAndAbbreviation[1]} ${splitWeatherTime[2]} -->`;
+    if(index === 0){
+      time = `<-- ${weatherHourAndAbbreviation[0]}:${weatherHourAndAbbreviation[1]} ${splitWeatherTime[2]} -->`;
+    }
 
     string += `
-<-- ${time} -->
+${time}
 ${hour.temperature} F
 ${hour.windSpeed} ${hour.windDirection}
-${hour.shortForecast}\n`;
+${hour.shortForecast}`;
   });
   return string;
 };
@@ -32,7 +35,7 @@ export const tweet = async (data, gameDayWeather, hourlyWeather) => {
 
   let hourly = '';
   if(hourlyWeather && hourlyWeather.length > 0){
-    hourly = `\n\n** Hourly Forecast **\n${handleHourlyFormat(hourlyWeather)}`;
+    hourly = `\n\n** Hourly Forecast in EST **${handleHourlyFormat(hourlyWeather)}`;
   } 
   
   let stadiumType;

@@ -45,12 +45,12 @@ export const handleForecastData = async ( forecast, hourly, data ) => {
   catch(error){
     console.log(error);
     if(attempts > 0){
-        attempts--;
-        setTimeout(() => {
-        handleForecastData(forecast, hourly, data);
-        }, 1000 * 60);
+      attempts--;
+      setTimeout(() => {
+      handleForecastData(forecast, hourly, data);
+      }, 1000 * 60);
     } else {
-        handleErrorLog(`Hourly Forecast Error ${error} on game ${data.AwayTeam} vs ${data.HomeTeam}`);
+      handleErrorLog(`Hourly Forecast Error ${error} on game ${data.AwayTeam} vs ${data.HomeTeam}`);
     }
   }
 }
