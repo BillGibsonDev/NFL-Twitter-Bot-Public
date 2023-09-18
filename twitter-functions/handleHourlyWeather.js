@@ -2,7 +2,7 @@ import axios from 'axios';
 import { handleErrorLog } from './handleLog.js';
 import { generateUserAgent } from './generateUserAgent.js';
 
-let attempts = 19;
+let attempts = 20;
 
 export const handleHourlyWeather = async (forecastURL, data) => {
   try {

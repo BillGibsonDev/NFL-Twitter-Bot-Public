@@ -16,16 +16,19 @@ export const handleErrorLog = (log) => {
   });
 }
 
-export const handleTweetLog = (log) => {
+export const handleTweetLog = (data, log) => {
   const statuses = ['InProgress', 'Final', 'F/OT', 'Postponed' ];
   let message;
 
-  if(statuses.includes(log.Status)){
-    message = `\n${log.Status} - ${log.AwayTeam} vs ${log.HomeTeam} @ ${new Date()}\n`;
+  let gameDate = data.DateTime;
+  let slicedGameDate = gameDate.slice(0,13);
+
+  if(statuses.includes(data.Status)){
+    message = `\n${data.Status} - ${data.AwayTeam} vs ${data.HomeTeam} @ ${new Date()}\n`;
   } else {
     message = `\n${log}\n`;
   }
-  fs.appendFile(`./tweet-logs/${handleDates()}-logs.txt`, message, function (err) {
+  fs.appendFile(`./tweet-logs/${slicedGameDate}-logs.txt`, message, function (err) {
     if (err) console.log(err);
   });
 }

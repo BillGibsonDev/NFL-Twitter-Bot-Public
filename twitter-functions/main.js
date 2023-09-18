@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import axios from "axios";
 
 // functions
-import { handleErrorLog, handleTweetLog } from "./handleLog.js";
+import { handleErrorLog } from "./handleLog.js";
 import { handleWeather } from "./handleWeather.js";
 
 dotenv.config();
@@ -18,51 +18,34 @@ const handleTimeSort = (arr) => {
   return arr;
 }
 
-  // const sortDataByDate = (data) => {
-  //   const groupedData = {};
-  //   const today = new Date();
-  //   today.setHours(0, 0, 0, 0);
-
-  //   data.forEach(game => {
-  //     let gameDate = game.DateTime;
-  //     let slicedGameDate = gameDate.slice(0,13);
-
-  //     gameDate.setHours(0, 0, 0, 0);
-
-  //     let gameDateString = gameDate.toLocaleDateString();
-
-  //     if (today.getTime() === gameDate.getTime()) {
-  //       gameDateString = 'Today';
-  //     }
-
-  //     if (!groupedData[slicedGameDate]) {
-  //       groupedData[slicedGameDate] = {
-  //         date: slicedGameDate,
-  //         games: []
-  //       };
-  //     }
-      
-  //     groupedData[slicedGameDate].games.push(game);
-  //   });
-
-  //   const groupedArray = Object.values(groupedData);
-  //   return groupedArray;
-  // };
-
 const statuses = ['InProgress', 'Final', 'F/OT', 'Postponed' ];
+
+const gameDayCheck = (data) => {
+  const today = new Date();
+  const formattedToday = today.toDateString();
+  const filteredGames = [];
+
+  data.forEach((game) => {
+    const gameDate = new Date(game.DateTime);
+    const formattedGameDate = gameDate.toDateString();
+    if(formattedToday === formattedGameDate){
+      if(!statuses.includes(game.Status)){
+        filteredGames.push(game);
+      }
+    }
+  })
+  return filteredGames;
+}
 
 export const handleTwitterGames = async () => {
   try {
     const response = await axios.get(`${process.env.NODE_ENV_SPORTS_API}`);
     const data = handleTimeSort(response.data);
-    for (let i = 0; i < data.length; i++) {
+    const filteredData = gameDayCheck(data);
+    for (let i = 0; i < filteredData.length; i++) {
       setTimeout(() => {
-        if (statuses.includes(data[i].Status)) {
-          handleTweetLog(data[i]);
-        } else {
-          handleWeather(data[i].StadiumDetails.GeoLat, data[i].StadiumDetails.GeoLong, data[i]);
-        }
-      }, 1000 * 60 * 1 * i);
+        handleWeather(filteredData[i].StadiumDetails.GeoLat, filteredData[i].StadiumDetails.GeoLong, filteredData[i]);
+      }, 1000 * 60 * .25 * i);
     }
   } catch (error) {
     if(attempts > 0){
