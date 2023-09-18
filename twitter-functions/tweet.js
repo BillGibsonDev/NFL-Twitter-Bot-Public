@@ -58,6 +58,14 @@ const handleStadiumType = (stadium) => {
   }
 }
 
+const handleDayString = (day) => {
+  const weekday = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
+  const d = new Date(day);
+  const dayName = weekday[d.getDay()];
+
+  return dayName;
+}
+
 export const tweet = async (data, gameDayWeather, hourlyWeather) => {
   if(!gameDayWeather){
     handleErrorLog(`No forecast available yet ${data.AwayTeam} at ${data.HomeTeam}`);
@@ -68,10 +76,7 @@ export const tweet = async (data, gameDayWeather, hourlyWeather) => {
   const awayTeam = TeamNames.find(team => team.id === data.AwayTeam);
   const homeTeam = TeamNames.find(team => team.id === data.HomeTeam);
 
-  // const weekday = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
-  // const d = new Date(data.Day);
-  // const day = weekday[d.getDay()];
-
+  // const day = handleDayString(data.Day);
   const hourly = handleHourlyFormat(hourlyWeather);
   const stadiumType = handleStadiumType(data.StadiumDetails);
   const channel = handleChannel(data.Channel);
