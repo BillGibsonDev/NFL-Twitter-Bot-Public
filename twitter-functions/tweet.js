@@ -91,7 +91,7 @@ Surface: ${data.StadiumDetails.PlayingSurface}
 ** Game Day Forecast ** 
 ${gameDayWeather.detailedForecast}${hourly}`;
   try {
-    // await rwClient.v2.tweet({text: tweetText });
+    // await rwClient.v2.tweet(tweetText);
     handleTweetLog(data, tweetText);
   } catch (error) {
     handleErrorLog(error);
