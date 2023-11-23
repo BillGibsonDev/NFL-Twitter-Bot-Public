@@ -9,7 +9,7 @@ import { handleErrorLog } from "./handleLog.js";
 import { handleForecastData } from "./handleForecastData.js";
 import { generateUserAgent } from "./generateUserAgent.js";
 
-let attempts = 20;
+let attempts = 5;
 
 export const handleWeather = async (lat, lon, data) => {
   if(!lat || !lon ){
@@ -32,6 +32,10 @@ export const handleWeather = async (lat, lon, data) => {
     console.log(error);
     if(attempts > 0){
       attempts--;
+      if(error.response.status === 404){
+        handleErrorLog(`Forecast Error ${error.response.detail} on game ${data.AwayTeam} vs ${data.HomeTeam}`);
+        return;
+      }
       setTimeout(() => {
         handleWeather(lat, lon, data);
       }, 1000 * 60);
