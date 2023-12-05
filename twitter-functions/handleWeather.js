@@ -32,8 +32,8 @@ export const handleWeather = async (lat, lon, data) => {
     console.log(error);
     if(attempts > 0){
       attempts--;
-      if(error.response.status === 404){
-        handleErrorLog(`Forecast Error ${error.response.detail} on game ${data.AwayTeam} vs ${data.HomeTeam}`);
+      if(error.response.status && error.response.status === 404){
+        handleErrorLog(`Forecast Error ${error.response.status} on game ${data.AwayTeam} vs ${data.HomeTeam}`);
         return;
       }
       setTimeout(() => {
