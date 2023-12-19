@@ -19,9 +19,9 @@ const handleHourlyFormat = (hourly) => {
     }
     string += `
 ${time}
-${hour.temperature} F
-${hour.windSpeed} ${hour.windDirection}
-${hour.shortForecast}`;
+${hour.shortForecast}
+${hour.temperature} F 
+${hour.windSpeed} ${hour.windDirection}`;
   });
   return `\n\n** Hourly Forecast in EST **${string}`;
 };
