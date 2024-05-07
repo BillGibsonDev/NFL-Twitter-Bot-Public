@@ -4,10 +4,10 @@
 
 <a href="https://www.4Cast4Football.com/" target="_blank">Website</a>
 
-<a href=" https://www.x.com/4cast4football" target="_blank">X / Twitter Account</a>
+<a href="https://www.x.com/4cast4football" target="_blank">X / Twitter Account</a>
 
 <a href="https://github.com/BillGibsonDev/NFL-Twitter-Bot-Public" target="_blank">X / Twitter Bot</a>
 
 <a href="https://github.com/BillGibsonDev/Football-Weather-Site" target="_blank">Frontend</a>
 
-<a href="[https://github.com/BillGibsonDev/Football-Weather-Server" target="_blank">Backend</a>
+<a href="https://github.com/BillGibsonDev/Football-Weather-Server" target="_blank">Backend</a>
